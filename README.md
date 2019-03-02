@@ -1,2 +1,2 @@
 # ZimmetOtomasyonuEntityFramework
-[![image](https://i.hizliresim.com/4jO1oJ.png)](https://hizliresim.com/4jO1oJ)
+[![image](https://hizliresim.com/4jO1oJ)](https://hizliresim.com/4jO1oJ)
