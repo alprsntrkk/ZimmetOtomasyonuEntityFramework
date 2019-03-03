@@ -18,18 +18,14 @@ namespace YazilimSinamaProject
                     {
                         if ((es.EsyaAdı == _urunAd) && (es.Marka == _urunMarka) && (es.Model == _urunModel))
                         {
-                            foreach (Depo d in db.Depo)
-                            {
-                                if ((d.EsyaId == es.EsyaId) && (d.StokMiktari > 0))
-                                {
-                                    Zimmet z = new Zimmet();
-                                    z.EsyaId = es.EsyaId;
-                                    z.CalisanId = k.kullaniciId;
-                                    d.StokMiktari--;
-                                    z.ZimmetVakti = DateTime.Now;
-                                    db.Zimmet.Add(z);
-                                }
-                            }
+                            
+                            Zimmet z = new Zimmet();
+                            z.EsyaId = es.EsyaId;
+                            z.CalisanId = k.kullaniciId;
+                            var depom = es.Depo;
+                            depom.StokMiktari--;
+                            z.ZimmetVakti = DateTime.Now;
+                            db.Zimmet.Add(z);
                         }
                     }
                 }
